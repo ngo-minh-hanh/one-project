@@ -9,175 +9,184 @@
     android:background="@color/teal_200"
     tools:context=".MainActivity"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
+
         <EditText
             android:layout_width="275dp"
             android:layout_height="match_parent"
-            android:id="@+id/editTextTenThanhPho"
+            android:id="@+id/editTextSearch"
             android:background="@color/white"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6A6262"
             android:hint="City, State"
             android:textSize="20dp"
-            android:layout_marginLeft="5dp">
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black">
         </EditText>
+
         <Button
-            android:id="@+id/btnTimkiem"
+            android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tìm kiếm"
-            android:layout_marginLeft="10dp"
-               >
+            android:layout_marginLeft="10dp">
         </Button>
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewThanhPho"
+        android:id="@+id/textViewCity"
         android:layout_marginTop="5dp"
         android:text="Tên thành phố"
         android:textSize="20dp"
         android:textColor="@color/black">
     </TextView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextQuocGia"
+        android:id="@+id/editTextCoutry"
         android:layout_marginTop="5dp"
-        android:text="Tên quốc gia"
+        android:text="Tên quốc gia: "
         android:textSize="20dp"
         android:textColor="@color/black">
     </TextView>
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageViewThoiTiet"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/imageViewIcon"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/ic_launcher_background"
-        >
-    </ImageView>
+        android:layout_marginTop="5dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewNhietDo"
+        android:id="@+id/textViewTemp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="#F44336"
         android:text="26oC"
         android:textSize="50dp">
     </TextView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewThoiTiet"
+        android:id="@+id/textViewStatus"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="Kiểu thời tiết"
         android:textSize="20dp">
     </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:orientation="horizontal"
         android:weightSum="3">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageViewMua"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center">
-
             </ImageView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="% mưa"
+                android:id="@+id/textViewCloud"
+                android:text="% mây"
                 android:textSize="20dp"
                 android:layout_gravity="center"
                 android:gravity="center">
-
             </TextView>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageViewDoAm"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center">
-
             </ImageView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewDoAm"
+                android:id="@+id/textViewHumidity"
                 android:text="Độ ẩm"
                 android:textSize="20dp"
                 android:layout_gravity="center"
                 android:gravity="center">
-
             </TextView>
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageViewGio"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center">
-
             </ImageView>
+
             <TextView
-                android:id="@+id/textViewTocDoGio"
+                android:id="@+id/textViewWind"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tốc độ gió"
                 android:textSize="20dp"
                 android:layout_gravity="center"
                 android:gravity="center">
-
             </TextView>
-        </LinearLayout>
 
+        </LinearLayout>
     </LinearLayout>
+
     <TextView
+        android:id="@+id/textViewDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewThoiGian"
         android:layout_marginTop="20dp"
-        android:text="Thời gian"
         android:gravity="center"
-        android:textSize="25dp">
+        android:text="Thời gian"
+        android:textSize="25dp"></TextView>
 
-    </TextView>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnNgayTiepTheo"
+        android:id="@+id/btnChangeActivity"
         android:text="Các ngày tiếp theo"
         android:layout_marginTop="15dp"
         android:textSize="20dp"
-        android:background="@color/white">
-
+        android:background="@color/white"
+        android:textColor="@color/black">
     </Button>
 </LinearLayout>
 
